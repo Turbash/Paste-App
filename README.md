@@ -1,4 +1,4 @@
-#Paste App
+Paste App
 
 A simple paste app built using Vite and React.
 
