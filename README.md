@@ -1,58 +1,52 @@
-Paste App
+# Paste App
 
 A simple paste app built using Vite and React.
 
-Features
+## Features
 
-Create and store text snippets (pastes)
+- Create and store text snippets (pastes)
+- Search pastes by title
+- View individual pastes
 
-Search pastes by title
+## Tech Stack
 
-View individual pastes
+- **Vite**: Fast build tool for modern web applications
+- **React**: Frontend library for building UI
+- **React Router**: For navigation and dynamic routing
 
-Tech Stack
+## Installation
 
-Vite: Fast build tool for modern web applications
+### Prerequisites
 
-React: Frontend library for building UI
+- Node.js (>= 14)
+- npm or yarn
 
-React Router: For navigation and dynamic routing
+### Steps
 
-Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/paste-app.git
+   cd paste-app
+   ```
+2. Install dependencies:
+   ```sh
+   npm install  # or yarn install
+   ```
+3. Start the development server:
+   ```sh
+   npm run dev  # or yarn dev
+   ```
+4. Open `http://localhost:5173/` in your browser.
 
-Prerequisites
+## Usage
 
-Node.js (>= 14)
+- Add a new paste by entering a title and content.
+- Search for pastes using the search bar.
+- Click on a paste to view its details.
 
-npm or yarn
+## Folder Structure
 
-Steps
-
-Clone the repository:
-
-git clone https://github.com/your-username/paste-app.git
-cd paste-app
-
-Install dependencies:
-
-npm install  # or yarn install
-
-Start the development server:
-
-npm run dev  # or yarn dev
-
-Open http://localhost:5173/ in your browser.
-
-Usage
-
-Add a new paste by entering a title and content.
-
-Search for pastes using the search bar.
-
-Click on a paste to view its details.
-
-Folder Structure
-
+```
 Paste-App/
 ├── src/
 │   ├── components/   # Reusable UI components
@@ -65,20 +59,23 @@ Paste-App/
 ├── package.json      # Project metadata and dependencies
 ├── vite.config.js    # Vite configuration
 └── README.md         # Project documentation
+```
 
-Deployment
+## Deployment
 
 To build the app for production:
 
+```sh
 npm run build  # or yarn build
+```
 
-This generates a dist/ folder with optimized assets. Deploy it using Netlify, Vercel, or any static hosting service.
+This generates a `dist/` folder with optimized assets. Deploy it using Netlify, Vercel, or any static hosting service.
 
-License
+## License
 
 This project is licensed under the MIT License.
 
-Author
+## Author
 
-Turbash Negi - https://github.com/Turbash
+Turbash Negi - [https://github.com/Turbash](https://github.com/Turbash)
 
