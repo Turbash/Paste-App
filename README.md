@@ -1,12 +1,84 @@
-# React + Vite
+#Paste App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple paste app built using Vite and React.
 
-Currently, two official plugins are available:
+Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Create and store text snippets (pastes)
 
-## Expanding the ESLint configuration
+Search pastes by title
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+View individual pastes
+
+Tech Stack
+
+Vite: Fast build tool for modern web applications
+
+React: Frontend library for building UI
+
+React Router: For navigation and dynamic routing
+
+Installation
+
+Prerequisites
+
+Node.js (>= 14)
+
+npm or yarn
+
+Steps
+
+Clone the repository:
+
+git clone https://github.com/your-username/paste-app.git
+cd paste-app
+
+Install dependencies:
+
+npm install  # or yarn install
+
+Start the development server:
+
+npm run dev  # or yarn dev
+
+Open http://localhost:5173/ in your browser.
+
+Usage
+
+Add a new paste by entering a title and content.
+
+Search for pastes using the search bar.
+
+Click on a paste to view its details.
+
+Folder Structure
+
+Paste-App/
+├── src/
+│   ├── components/   # Reusable UI components
+│   ├── pages/        # Page components (Home, PasteDetails)
+│   ├── App.jsx       # Main App component
+│   ├── main.jsx      # Entry point
+│   ├── routes.js     # Defines app routes
+├── public/           # Static assets
+├── index.html        # Root HTML file
+├── package.json      # Project metadata and dependencies
+├── vite.config.js    # Vite configuration
+└── README.md         # Project documentation
+
+Deployment
+
+To build the app for production:
+
+npm run build  # or yarn build
+
+This generates a dist/ folder with optimized assets. Deploy it using Netlify, Vercel, or any static hosting service.
+
+License
+
+This project is licensed under the MIT License.
+
+Author
+
+Turbash Negi - https://github.com/Turbash
+
