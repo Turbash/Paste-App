@@ -64,7 +64,7 @@ const Paste = () => {
                       </a>
                     </button>
                     <button>
-                      <a href={`/pastes/${paste?._id}`}>
+                      <a href={`/paste/${paste?._id}`}>
                         View
                       </a>
                     </button>
