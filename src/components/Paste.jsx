@@ -20,7 +20,6 @@ const Paste = () => {
 
   function handleShare(paste) {
     if (navigator.share) {
-      console.log(paste);
       navigator.share({
         title: paste.title,
         text: paste.content,
