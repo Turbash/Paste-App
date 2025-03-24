@@ -18,6 +18,21 @@ const Paste = () => {
     dispatch(removeFromPastes(pasteId));
   }
 
+  function handleShare(paste) {
+    if (navigator.share) {
+      console.log(paste);
+      navigator.share({
+        title: paste.title,
+        text: paste.content,
+        url: window.location.href,
+      })
+      .then(() => toast.success('Share successful'))
+      .catch((error) => console.log('Sharing failed', error));
+    } else {
+      toast.error("Web Share API is not supported in your browser.");
+    }
+  }
+
   return (
     <div>
       <div>
@@ -62,7 +77,7 @@ const Paste = () => {
                     }}>
                       Copy
                     </button>
-                    <button>
+                    <button onClick={() => handleShare(paste)}>
                       Share
                     </button>
                   </div>
