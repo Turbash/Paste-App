@@ -3,57 +3,77 @@
 @tailwind utilities;
 
 :root {
-  --terminal-bg: #282c34;
-  --terminal-text: #abb2bf;
-  --terminal-green: #98c379;
-  --terminal-blue: #61afef;
-  --terminal-purple: #c678dd;
+  --bg-primary: #1a1b26;
+  --bg-secondary: #24283b;
+  --text-primary: #a9b1d6;
+  --accent-primary: #7aa2f7;
+  --accent-secondary: #bb9af7;
+  --success: #9ece6a;
+  --danger: #f7768e;
 }
 
 body {
   margin: 0;
-  background-color: var(--terminal-bg);
-  color: var(--terminal-text);
-  font-family: 'Fira Code', monospace;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
   min-height: 100vh;
 }
 
 textarea, input {
-  background-color: #1e2227;
-  color: var(--terminal-text);
-  border: 1px solid #3e4451;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
 }
 
 textarea:focus, input:focus {
   outline: none;
-  border-color: var(--terminal-blue);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(122, 162, 247, 0.2);
 }
 
 button {
-  background-color: #1e2227;
-  color: var(--terminal-green);
-  border: 1px solid var(--terminal-green);
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
   transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 button:hover {
-  background-color: var(--terminal-green);
-  color: var(--terminal-bg);
+  background-color: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+.danger-button:hover {
+  background-color: var(--danger);
+  color: white;
 }
 
 a {
-  color: var(--terminal-blue);
+  color: var(--accent-primary);
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 a:hover {
-  color: var(--terminal-purple);
+  color: var(--accent-secondary);
 }
 
-.terminal-window {
-  background-color: #1e2227;
-  border: 1px solid #3e4451;
-  border-radius: 6px;
-  padding: 1rem;
-  margin: 1rem;
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
 }

@@ -1,24 +1,27 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import { FaHome, FaClipboard } from 'react-icons/fa'
 
 const Navbar = () => {
   return (
-    <div className='terminal-window flex justify-center gap-8 mb-8'>
+    <nav className='max-w-4xl mx-auto p-6 flex justify-center gap-8 mb-8'>
       <NavLink
         to="/"
         className={({ isActive }) =>
-          `text-lg ${isActive ? 'text-terminal-green' : 'text-terminal-text'} hover:text-terminal-purple`
+          `flex items-center gap-2 text-lg ${isActive ? 'text-accent-primary' : 'text-text-primary'} hover:text-accent-secondary`
         }>
-        $ Home
+        <FaHome className="text-xl" />
+        Home
       </NavLink>
       <NavLink
         to="/pastes"
         className={({ isActive }) =>
-          `text-lg ${isActive ? 'text-terminal-green' : 'text-terminal-text'} hover:text-terminal-purple`
+          `flex items-center gap-2 text-lg ${isActive ? 'text-accent-primary' : 'text-text-primary'} hover:text-accent-secondary`
         }>
-        $ Pastes
+        <FaClipboard className="text-xl" />
+        Pastes
       </NavLink>
-    </div>
+    </nav>
   )
 }
 

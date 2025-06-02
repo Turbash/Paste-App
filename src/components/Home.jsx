@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom';
-import {useDispatch, useSelector} from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addToPastes, updateToPastes } from '../redux/pasteSlice';
+import { FaSave } from 'react-icons/fa'
 
 const Home = () => {
   const [title, setTitle] = useState('');
@@ -38,31 +39,33 @@ const Home = () => {
   }
 
   return (
-    <div className="terminal-window max-w-4xl mx-auto">
-      <div className='flex flex-col gap-4'>
-        <div className="flex items-center gap-4">
-          <span className="text-terminal-green">$</span>
-          <input
-            className='flex-1 p-2 rounded bg-[#1e2227] border border-[#3e4451] focus:border-terminal-blue'
-            type="text"
-            placeholder='enter title here'
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <button
-            onClick={createPaste}
-            className='px-4 py-2 rounded hover:bg-terminal-green hover:text-terminal-bg transition-colors'>
-            {pasteId ? "Update Paste" : "Create Paste"}
-          </button>
-        </div>
-        <div className='mt-4'>
-          <textarea 
-            className='w-full rounded bg-[#1e2227] border border-[#3e4451] focus:border-terminal-blue p-4'
-            value={value}
-            placeholder='enter content here'
-            onChange={(e) => setValue(e.target.value)}
-            rows={20}
-          />
+    <div className="max-w-4xl mx-auto px-4">
+      <div className='card'>
+        <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-4">
+            <input
+              className='flex-1 p-3'
+              type="text"
+              placeholder='Enter title...'
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <button
+              onClick={createPaste}
+              className='bg-accent-primary text-white hover:bg-accent-secondary'>
+              <FaSave />
+              {pasteId ? "Update Paste" : "Save Paste"}
+            </button>
+          </div>
+          <div className='mt-4'>
+            <textarea 
+              className='w-full p-4'
+              value={value}
+              placeholder='Enter your content here...'
+              onChange={(e) => setValue(e.target.value)}
+              rows={20}
+            />
+          </div>
         </div>
       </div>
     </div>

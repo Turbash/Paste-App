@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        'terminal-bg': '#282c34',
-        'terminal-text': '#abb2bf',
-        'terminal-green': '#98c379',
-        'terminal-blue': '#61afef',
-        'terminal-purple': '#c678dd',
+        'bg-primary': 'var(--bg-primary)',
+        'bg-secondary': 'var(--bg-secondary)',
+        'text-primary': 'var(--text-primary)',
+        'accent-primary': 'var(--accent-primary)',
+        'accent-secondary': 'var(--accent-secondary)',
+        'success': 'var(--success)',
+        'danger': 'var(--danger)',
       },
     },
   },
