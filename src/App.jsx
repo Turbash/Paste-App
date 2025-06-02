@@ -24,7 +24,7 @@ const router=createBrowserRouter(
       </div>
     },
     {
-      path:"/paste/:id",
+      path:"/pastes/:id",
       element:
       <div>
         <Navbar />
