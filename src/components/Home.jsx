@@ -11,7 +11,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const allPastes = useSelector((state) => state.paste.pastes);
   const pasteId = searchParams.get("pasteId");
-  
+
   useEffect(() => {
     if(pasteId) {
       const paste = allPastes.find((p) => p._id === pasteId);
@@ -42,7 +42,7 @@ const Home = () => {
     <div className="max-w-4xl mx-auto px-4">
       <div className='card'>
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 flex-col md:flex-row">
             <input
               className='flex-1 p-3'
               type="text"
@@ -52,7 +52,7 @@ const Home = () => {
             />
             <button
               onClick={createPaste}
-              className='bg-accent-primary text-white hover:bg-accent-secondary'>
+              className='bg-accent-primary text-white hover:bg-accent-secondary py-2 px-3 rounded-xl flex gap-2 items-center w-full md:w-auto'>
               <FaSave />
               {pasteId ? "Update Paste" : "Save Paste"}
             </button>
