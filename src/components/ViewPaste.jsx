@@ -4,11 +4,8 @@ import { useParams } from 'react-router-dom';
 
 const ViewPaste = () => {
   const { id } = useParams();
-  console.log(id);
   const allPastes = useSelector((state) => state.paste.pastes);
-  console.log(allPastes);
-  const paste = allPastes.find((p) => p._id === id);
-  console.log(paste);
+  const paste = allPastes.find((p) => p._id === String(id));
 
   if (!paste) {
     return (
