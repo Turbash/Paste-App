@@ -26,6 +26,7 @@ textarea, input {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   transition: all 0.2s;
+  width: 100%;
 }
 
 textarea:focus, input:focus {
@@ -34,36 +35,8 @@ textarea:focus, input:focus {
   box-shadow: 0 0 0 2px rgba(122, 162, 247, 0.2);
 }
 
-button {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  transition: all 0.2s;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-}
-
-button:hover {
-  background-color: var(--accent-primary);
-  color: var(--bg-primary);
-}
-
-.danger-button:hover {
-  background-color: var(--danger);
-  color: white;
-}
-
-a {
-  color: var(--accent-primary);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-a:hover {
-  color: var(--accent-secondary);
+button, a {
+  transition: all 0.2s ease-in-out;
 }
 
 .card {
@@ -71,9 +44,22 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  transition: transform 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 .card:hover {
   transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+pre {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
