@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { removeFromPastes } from '../redux/pasteSlice';
 import toast from 'react-hot-toast';
 import { FaSearch, FaEdit, FaEye, FaTrash, FaCopy, FaShare } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const Paste = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -72,18 +73,18 @@ const Paste = () => {
               </div>
 
               <div className='flex flex-wrap gap-3 items-center'>
-                <a 
-                  href={`/?pasteId=${paste?._id}`}
+                <Link 
+                  to={`/?pasteId=${paste?._id}`}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-primary hover:bg-accent-primary hover:text-white transition-colors">
                   <FaEdit />
                   Edit
-                </a>
-                <a 
-                  href={`/pastes/${paste?._id}`}
+                </Link>
+                <Link 
+                  to={`/pastes/${paste?._id}`}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-bg-primary hover:bg-accent-primary hover:text-white transition-colors">
                   <FaEye />
                   View
-                </a>
+                </Link>
                 <button 
                   onClick={() => {
                     navigator.clipboard.writeText(paste?.content);
