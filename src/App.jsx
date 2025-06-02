@@ -27,7 +27,7 @@ const router=createBrowserRouter(
       path:"/pastes/:id",
       element:
       <div>
-        <Navbar />
+        <Navbar/>
         <ViewPaste/>
       </div>
     },
