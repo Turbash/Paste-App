@@ -39,3 +39,5 @@ const ViewPaste = () => {
     </div>
   );
 }
+
+export default ViewPaste

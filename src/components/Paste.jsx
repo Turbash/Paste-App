@@ -92,3 +92,5 @@ const Paste = () => {
     </div>
   )
 }
+
+export default Paste
